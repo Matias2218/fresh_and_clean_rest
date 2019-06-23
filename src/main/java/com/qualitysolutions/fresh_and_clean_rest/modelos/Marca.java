@@ -18,6 +18,14 @@ public class Marca implements Serializable {
     @Column(nullable = false,length = 300)
     private String descripcion;
 
+    public Marca() {
+    }
+
+    public Marca(@NotEmpty String nombre, @NotEmpty String descripcion) {
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+    }
+
     public Long getId() {
         return id;
     }

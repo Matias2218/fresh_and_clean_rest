@@ -16,6 +16,13 @@ public class Categoria implements Serializable {
     @NotEmpty(message = "La imagen no puede estar vacio")
     private String nombre;
 
+    public Categoria() {
+    }
+
+    public Categoria(@NotEmpty(message = "La imagen no puede estar vacio") String nombre) {
+        this.nombre = nombre;
+    }
+
     public Long getId() {
         return id;
     }
